@@ -4,6 +4,7 @@
 @import url("topicos.css");
 @import url("contato.css");
 @import url("footer.css");
+@import url("formulario.css");
 
 :root {
     --cor_de_fundo: #EBECEE;

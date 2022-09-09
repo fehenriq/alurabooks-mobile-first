@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alurabooks</title>
+    <title>Formulário de cadastro</title>
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -66,152 +66,107 @@
     </header>
 
     <section class="banner">
-        <h2 class="banner__titulo">Já sabe por onde começar?</h2>
-        <p class="banner__texto">Encontre em nossa estante o que precisa para seu desenvolvimento!</p>
-        <input type="search" class="banner__pesquisa" placeholder="Qual será sua próxima leitura?">
+        <h2 class="banner__titulo">Tela de cadastro</h2>
     </section>
 
-    <section class="carrosel">
-        <h2 class="carrossel__titulo">Novos Lançamentos</h2>
-        <!-- Slider main container -->
-        <div class="carrossel__container">
-            <div class="swiper">
-                <!-- Additional required wrapper -->
-                <!-- If we need pagination -->
-                <div class="swiper-pagination"></div>
-                
-                <div class="swiper-wrapper">
-                    <!-- Slides -->
-                    <div class="swiper-slide"><img src="assets/img/ApacheKafka.png" alt="Livro sobre ApacheKafka e SpringBoot"></div>
-                    <div class="swiper-slide"><img src="assets/img/ReactNative.png" alt="Livro sobre React Native"></div>
-                    <div class="swiper-slide"><img src="assets/img/Liderança.png" alt="Livro sobre liderança em design"></div>
-                    <div class="swiper-slide"><img src="assets/img/Javascript.png" alt="Livro sobre Javascript assertivo"></div>
-                    <div class="swiper-slide"><img src="assets/img/Guia Front-end.png" alt="Livro Guia Front-end"></div>
-                    <div class="swiper-slide"><img src="assets/img/Portugol.png" alt="Livro sobre Portugol"></div>
-                </div>
+    <main class="principal">
+        <h2 class="principal__titulo">Dados do cadastro</h2>
 
-                <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-            </div> 
-
-            <div class="card">
-                <!-- 1º linha -->
-                <div class="card__descricao">
-                    <!-- 1º Coluna -->
-                    <div class="descricao">
-                        <h3 class="descricao__titulo">Talvez você se interesse por...</h3>
-                        <h2 class="descricao__titulo-livro">Angular 11 e Firebase</h2>
-                        <p class="descricao__texto">Construindo uma aplicação integrada com a plataforma do Google.</p>
-                    </div>
-                    <!-- 2º coluna-->
-                    <img src="assets/img/Angular.png" alt="Logo Angular">
+        <form class="principal__formulario" id="formulario" target="_blank"
+            onsubmit="location.replace('./cadastro-finalizado.html')">
+            <h3 class="principal__subtitulo">Dados pessoais</h3>
+            <div class="formulario__campo">
+                <label class="campo__etiqueta" for="nome">Nome Completo</label>
+                <input name="nome" id="nome" class="campo__escrita" required />
+            </div>
+            <div class="formulario__dupla">
+                <div class="formulario__campo">
+                    <label class="campo__etiqueta" for="nascimento">Nascimento</label>
+                    <input name="nascimento" id="nascimento" type="date" class="campo__escrita" required />
                 </div>
-                <!-- 2º linha-->
-                <div class="card__botoes">
-                    <!-- 1º coluna -->
-                    <ul class="botoes">
-                        <li class="botoes__item"><img src="assets/img/Favoritos.svg" alt="Favoritar livro"></li>
-                        <li class="botoes__item"><img src="assets/img/Compras.svg" alt="Adicionar ao carrinho de compras"></li>
-                    </ul>
-                    <!-- 2º coluna -->
-                    <a href="#" class="botoes__ancora">Saiba mais</a>
+                <div class="formulario__campo">
+                    <label class="campo__etiqueta" for="telefone">Contato</label>
+                    <input name="telefone" id="telefone" type="tel" placeholder="(XX) XXXXX-XXXX" class="campo__escrita"
+                        required />
                 </div>
             </div>
-        </div>
-    </section>
+            <div class="formulario__campo">
+                <label class="campo__etiqueta" for="email">E-mail</label>
+                <input name="email" id="email" type="email" class="campo__escrita" required />
+            </div>
 
-    <section class="carrosel">
-        <h2 class="carrossel__titulo">Mais vendidos</h2>
-        <!-- Slider main container -->
-        <div class="carrossel__container">
-            <div class="swiper">
-                <!-- Additional required wrapper -->
-                <!-- If we need pagination -->
-                <div class="swiper-pagination"></div>
-                    
-                <div class="swiper-wrapper">
-                    <!-- Slides -->
-                    <div class="swiper-slide"><img src="assets/img/Nodejs.png" alt="Livro sobre Node.js"></div>
-                    <div class="swiper-slide"><img src="assets/img/ReactNative.png" alt="Livro sobre React Native"></div>
-                    <div class="swiper-slide"><img src="assets/img/UX.png" alt="Livro sobre UX Estratégico"></div>
-                    <div class="swiper-slide"><img src="assets/img/Tuning.png" alt="Livro sobre Tuning de SQL"></div>
-                    <div class="swiper-slide"><img src="assets/img/Arquitetura.png" alt="Livro sobre Aquitetura de software distribuído"></div>
-                    <div class="swiper-slide"><img src="assets/img/MetricasAgeis.png" alt="Livro sobre Métricas ágeis"></div>
-                </div>
+            <h3 class="principal__subtitulo">Endereço</h3>
 
-                <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-            </div> 
-        
-            <div class="card">
-                <!-- 1º linha -->
-                <div class="card__descricao">
-                    <!-- 1º Coluna -->
-                    <div class="descricao">
-                        <img src="assets/img/Estrelinhas.png" alt="Imagem com estrelinhas" class="img-estrelas">
-                        <h3 class="descricao__titulo">Autora do Mês</h3>
-                        <h2 class="descricao__titulo-livro">Juliana Agarikov</h2>
-                        <p class="descricao__texto">Analista de sistemas e escritora, Juliana é especialista em Front-End.</p>
-                    </div>
-                    <!-- 2º coluna-->
-                    <img src="assets/img/Perfil-escritora 1.png" alt="Logo Angular">
+            <div class="formulario__campo">
+                <label class="campo__etiqueta" for="cep">CEP</label>
+                <input name="cep" id="cep" class="campo__escrita" required />
+                <div id="erro"></div>
+            </div>
+
+            <div class="formulario__campo">
+                <label class="campo__etiqueta" for="endereco">Endereço</label>
+                <input name="endereco" id="endereco" class="campo__escrita" required />
+            </div>
+            <div class="formulario__dupla">
+                <div class="formulario__campo">
+                    <label class="campo__etiqueta" for="numero">Numero</label>
+                    <input name="numero" id="numero" class="campo__escrita" required />
                 </div>
-                <!-- 2º linha-->
-                <div class="card__botoes">
-                    <!-- 1º coluna -->
-                    <ul class="botoes">
-                        <li class="botoes__item"><img src="assets/img/Favoritos.svg" alt="Favoritar livro"></li>
-                        <li class="botoes__item"><img src="assets/img/Compras.svg" alt="Adicionar ao carrinho de compras"></li>
-                    </ul>
-                    <!-- 2º coluna -->
-                    <a href="#" class="botoes__ancora">Saiba mais</a>
+                <div class="formulario__campo">
+                    <label class="campo__etiqueta" for="complemento">Complemento</label>
+                    <input name="complemento" id="complemento" class="campo__escrita" />
                 </div>
             </div>
-        </div>
-    </section>
+            <div class="formulario__campo">
+                <label class="campo__etiqueta" for="bairro">Bairro</label>
+                <input name="bairro" id="bairro" class="campo__escrita" required />
+            </div>
+            <div class="formulario__dupla">
+                <div class="formulario__campo">
+                    <label class="campo__etiqueta" for="cidade">Cidade</label>
+                    <input name="cidade" id="cidade" class="campo__escrita" required />
+                </div>
 
-    <section class="topicos">
-        <h2 class="topicos__titulo">TÓPICOS VISITADOS RECENTEMENTE</h2>
-        <ul class="topicos__lista">
-            <li class="topicos__item">
-                <a href="#" class="topicos__link">Android</a>
-            </li>
-            <li class="topicos__item">
-                <a href="#" class="topicos__link">Marketing Digital</a>
-            </li>
-            <li class="topicos__item">
-                <a href="#" class="topicos__link">Android</a>
-            </li>
-            <li class="topicos__item">
-                <a href="#" class="topicos__link">Agile</a>
-            </li>
-            <li class="topicos__item">
-                <a href="#" class="topicos__link">Startups</a>
-            </li>
-            <li class="topicos__item">
-                <a href="#" class="topicos__link">HTML & CSS</a>
-            </li>
-            <li class="topicos__item">
-                <a href="#" class="topicos__link">Python</a>
-            </li>
-            <li class="topicos__item">
-                <a href="#" class="topicos__link">Java</a>
-            </li>
-        </ul>
-    </section>
+                <div class="formulario__campo">
+                    <label class="campo__etiqueta" for="estado">UF</label>
+                    <select id="estado" name="estado" class="campo__escrita">
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                        <option value="EX">Estrangeiro</option>
+                    </select>
+                </div>
+            </div>
 
-    <section class="contato">
-        <div class="contato__descricao">
-            <h2 class="contato__titulo">Fique por dentro das novidades!</h2>
-            <p class="contato__texto">Atualizações de e-books, novos livros, promoções e outros.</p>
-        </div>
-        <input type="email" placeholder="Cadastre seu e-mail" class="contato__email">
-    </section>
+            <input type="submit" value="Enviar formulário" class="formulario__botao" id="enviar">
+        </form>
+    </main>
 
-    <hr/>
-
+    <hr>
     <footer class="rodape">
         <h2 class="rodape__titulo">&copy Grupo Alura</h2>
 
@@ -290,22 +245,6 @@
                 <a href="#" class="lista-rodape__link">GUJ</a>
             </li>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script>
-        const swiper = new Swiper('.swiper', {
-            spaceBetween: 10,
-            slidesPerView: 3,
-            pagination: {
-                el: '.swiper-pagination',
-                type: 'bullets',
-            },
-            navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-            },
-        });
-    </script>
     <script src="scripts.js"></script>
 </body>
 </html>
