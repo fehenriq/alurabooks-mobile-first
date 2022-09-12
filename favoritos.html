@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Alurabooks</title>
-        <link rel="stylesheet" href="assets/css/reset.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="assets/css/styles.css">
-    </head>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de cadastro</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
 
 <body>
     <header class="cabecalho">
@@ -63,20 +64,31 @@
             </a>
         </div>
     </header>
-
+    
     <section class="banner">
-        <h2 class="banner__titulo">Cadastro finalizado</h2>
+        <h2 class="banner__titulo">Livros Favoritos da Comunidade</h2>
+    </section>
+    
+    <nav class="wrap">
+      <ul class="nav">
+        <li><button class="btn btn-front" href="#" id="btnFiltrarLivrosFront" value="front-end">LIVROS DE FRONT-END</button></li>
+        <li><button class="btn btn-back" href="#" id="btnFiltrarLivrosBack" value="back-end">LIVROS DE BACK-END</button></li>
+        <li><button class="btn btn-dados" href="#" id="btnFiltrarLivrosDados" value="dados">LIVROS DE DADOS</button></li>
+        <li><button class="btn btn-disponiveis" href="#" id="btnLivrosDisponiveis" value="disponivel">LIVROS DISPONÍVEIS</button></li>
+        <li><button class="btn btn-ordenacao" href="#" id="btnOrdenarPorPreco">ORDENAR POR PREÇO</button></li>
+      </ul>
+    </nav>
+
+    <section class="livros wrap" id="livros"> 
+
     </section>
 
-    <main class="principal cadastro">
-        <h2 class="principal__titulo">Sucesso!</h2>
-        <h3 class="principal__subtitulo cadastro__subtitulo">Você finalizou seu cadastro!</h3>
-        <p class="principal__texto">Caso deseje editar informações ou atualizá-las no futuro, é só acessar a página de perfil!</p>
-        <img src="assets/img/Encerramento-compra---Alura-Books_1.png" alt="Ficha de cadastro completada"
-            class="cadastro__imagem">
-    </main>
+    <section id="valor_total_livros_disponiveis">
 
-    <hr>
+    </section>
+
+    <hr/>
+
     <footer class="rodape">
         <h2 class="rodape__titulo">&copy Grupo Alura</h2>
 
@@ -156,6 +168,11 @@
             </li>
     </footer>
 
-    <script src="js/scripts.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/metodoForEach.js"></script>
+    <script src="js/metodoMap.js"></script>
+    <script src="js/metodoFilter.js"></script>
+    <script src="js/metodoSort.js"></script>
+    <script src="js/metodoReduce.js"></script>
 </body>
 </html>

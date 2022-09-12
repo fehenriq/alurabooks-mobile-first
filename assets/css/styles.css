@@ -5,6 +5,7 @@
 @import url("contato.css");
 @import url("footer.css");
 @import url("formulario.css");
+@import url("favoritos.css");
 
 :root {
     --cor_de_fundo: #EBECEE;
